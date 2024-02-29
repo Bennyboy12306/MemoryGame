@@ -1,7 +1,7 @@
 # MemoryGame
-A simple memory game made in Unreal Engine 4 then ported to Unreal Engine 5 for no reason, It works the exact same
+A simple memory game made in Unreal Engine 4 then ported to Unreal Engine 5 for no reason
 
-I basically made this just to have a gam thats actually complete so don't expect much
+I basically made this just to have a game thats actually complete so don't expect much
 
 Created by Bennyboy2006
 
