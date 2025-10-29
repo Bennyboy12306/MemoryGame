@@ -1,0 +1,65 @@
+[gd_resource type="Theme" load_steps=14 format=3 uid="uid://mpdf1hpab6og"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40t7p"]
+bg_color = Color(0, 0, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_huikn"]
+bg_color = Color(0.29219002, 0.29219005, 0.29219002, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h5oyg"]
+bg_color = Color(0.29219002, 0.29219005, 0.29219002, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jrxhh"]
+bg_color = Color(0.29219002, 0.29219005, 0.29219002, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wei5n"]
+bg_color = Color(0, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_psxlf"]
+bg_color = Color(0, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6mipg"]
+bg_color = Color(0, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ttyy2"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ed42j"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gvdcw"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_toqvp"]
+bg_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f7poh"]
+bg_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ew7vv"]
+bg_color = Color(1, 1, 0, 1)
+
+[resource]
+BlueButton/base_type = &"Button"
+BlueButton/styles/focus = SubResource("StyleBoxFlat_40t7p")
+BlueButton/styles/hover = SubResource("StyleBoxFlat_40t7p")
+BlueButton/styles/normal = SubResource("StyleBoxFlat_40t7p")
+BlueButton/styles/pressed = SubResource("StyleBoxFlat_40t7p")
+Button/styles/hover = SubResource("StyleBoxFlat_huikn")
+Button/styles/normal = SubResource("StyleBoxFlat_h5oyg")
+Button/styles/pressed = SubResource("StyleBoxFlat_jrxhh")
+GreenButton/base_type = &"Button"
+GreenButton/styles/focus = SubResource("StyleBoxFlat_wei5n")
+GreenButton/styles/hover = SubResource("StyleBoxFlat_wei5n")
+GreenButton/styles/normal = SubResource("StyleBoxFlat_psxlf")
+GreenButton/styles/pressed = SubResource("StyleBoxFlat_6mipg")
+RedButton/base_type = &"Button"
+RedButton/styles/focus = SubResource("StyleBoxFlat_ttyy2")
+RedButton/styles/hover = SubResource("StyleBoxFlat_ttyy2")
+RedButton/styles/normal = SubResource("StyleBoxFlat_ed42j")
+RedButton/styles/pressed = SubResource("StyleBoxFlat_gvdcw")
+YellowButton/base_type = &"Button"
+YellowButton/styles/focus = SubResource("StyleBoxFlat_toqvp")
+YellowButton/styles/hover = SubResource("StyleBoxFlat_toqvp")
+YellowButton/styles/normal = SubResource("StyleBoxFlat_f7poh")
+YellowButton/styles/pressed = SubResource("StyleBoxFlat_ew7vv")

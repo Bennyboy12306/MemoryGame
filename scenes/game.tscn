@@ -1,0 +1,98 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqmjpvha7c8jm"]
+
+[ext_resource type="Script" uid="uid://c44dtn5iuk1lx" path="res://scripts/game.gd" id="1_yqjtg"]
+[ext_resource type="Theme" uid="uid://mpdf1hpab6og" path="res://resources/main.tres" id="2_lnu2h"]
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yqjtg")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -440.0
+offset_right = 400.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Buttons" type="HBoxContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 0
+
+[node name="BlueButton" type="Button" parent="Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_lnu2h")
+theme_type_variation = &"BlueButton"
+
+[node name="RedButton" type="Button" parent="Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_lnu2h")
+theme_type_variation = &"RedButton"
+
+[node name="GreenButton" type="Button" parent="Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_lnu2h")
+theme_type_variation = &"GreenButton"
+
+[node name="YellowButton" type="Button" parent="Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_lnu2h")
+theme_type_variation = &"YellowButton"
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 168.0
+offset_bottom = 77.0
+theme_override_font_sizes/font_size = 50
+text = "Score: "
+
+[node name="TimerLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_top = 8.0
+offset_right = 80.0
+offset_bottom = 77.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "10"
+horizontal_alignment = 1
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Buttons/BlueButton" to="." method="_on_blue_button_pressed"]
+[connection signal="pressed" from="Buttons/RedButton" to="." method="_on_red_button_pressed"]
+[connection signal="pressed" from="Buttons/GreenButton" to="." method="_on_green_button_pressed"]
+[connection signal="pressed" from="Buttons/YellowButton" to="." method="_on_yellow_button_pressed"]

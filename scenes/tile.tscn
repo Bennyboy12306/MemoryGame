@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtksnmutgp7j0"]
+
+[ext_resource type="Script" uid="uid://bveowlrwu02mr" path="res://scripts/tile.gd" id="1_3dk36"]
+
+[node name="Tile" type="ColorRect"]
+custom_minimum_size = Vector2(50, 50)
+offset_right = 50.0
+offset_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_3dk36")
