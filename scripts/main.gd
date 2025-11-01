@@ -1,3 +1,4 @@
+class_name Main
 extends Control
 
 const GAME: PackedScene = preload("uid://cqmjpvha7c8jm")
@@ -6,7 +7,7 @@ const MENU = preload("uid://dlweacpjjaxo3")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	instantiate_game_scene()
+	instantiate_menu_scene()
 	
 func instantiate_game_scene():
 	var game_scene_instance = GAME.instantiate() as Game
@@ -24,3 +25,4 @@ func instantiate_menu_scene():
 	var menu_scene_instance = MENU.instantiate() as Menu
 	add_child(menu_scene_instance)
 	menu_scene_instance.play.connect(instantiate_game_scene)
+	Globals.load_highscores()

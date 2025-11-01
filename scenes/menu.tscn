@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlweacpjjaxo3"]
+[gd_scene load_steps=4 format=3 uid="uid://dlweacpjjaxo3"]
 
 [ext_resource type="Script" uid="uid://0ux146ge85py" path="res://scripts/menu.gd" id="1_yqeox"]
+[ext_resource type="Theme" uid="uid://mpdf1hpab6og" path="res://resources/main.tres" id="2_vjb58"]
+[ext_resource type="Texture2D" uid="uid://dotgnu0ga3h6a" path="res://MemoryGame.png" id="3_con2f"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -11,21 +13,200 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yqeox")
 
-[node name="PlayButton" type="Button" parent="."]
-custom_minimum_size = Vector2(500, 100)
+[node name="Home" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Home"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -638.0
+offset_top = 80.0
+offset_right = -210.0
+offset_bottom = 163.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 60
+text = "Memory Game"
+
+[node name="HowToPlay" type="VBoxContainer" parent="Home"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -795.0
+offset_top = 88.0
+offset_right = -200.0
+offset_bottom = -81.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="Home/HowToPlay"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "How To Play"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Home/HowToPlay"]
+custom_minimum_size = Vector2(595, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "- You will have 10 seconds to
+remember the colors of the tiles and their position."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label4" type="Label" parent="Home/HowToPlay"]
+custom_minimum_size = Vector2(595, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "- After the ten seconds are up all the tiles will turn gray, except one which will turn white"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label5" type="Label" parent="Home/HowToPlay"]
+custom_minimum_size = Vector2(595, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "- Your goal is to idenfify what used to be in the place of the white tile"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label6" type="Label" parent="Home/HowToPlay"]
+custom_minimum_size = Vector2(595, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "- Guessing correctly will give you a point and generate a new grid"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label7" type="Label" parent="Home/HowToPlay"]
+custom_minimum_size = Vector2(595, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "- See how high you can score!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="Home"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -4.0
-offset_top = -4.0
-offset_right = 4.0
-offset_bottom = 4.0
+offset_left = -651.5
+offset_top = -330.0
+offset_right = -196.5
+offset_bottom = 122.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 50
-text = "PLAY"
+texture = ExtResource("3_con2f")
 
-[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Home"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -674.0
+offset_top = 214.0
+offset_right = -174.0
+offset_bottom = 418.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayButton" type="Button" parent="Home/VBoxContainer2"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+theme = ExtResource("2_vjb58")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Play"
+
+[node name="QuitButton" type="Button" parent="Home/VBoxContainer2"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+theme = ExtResource("2_vjb58")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+
+[node name="DifficultySelect" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -291.5
+offset_top = -206.0
+offset_right = 291.5
+offset_bottom = 206.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EasyButton" type="Button" parent="DifficultySelect"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+theme = ExtResource("2_vjb58")
+theme_type_variation = &"GreenButton"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Play Easy Mode (2x2)"
+
+[node name="EasyLabel" type="Label" parent="DifficultySelect"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Highscore: "
+
+[node name="NormalButton" type="Button" parent="DifficultySelect"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+theme = ExtResource("2_vjb58")
+theme_type_variation = &"YellowButton"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Play Normal Mode (4x4)"
+
+[node name="NormalLabel" type="Label" parent="DifficultySelect"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Highscore: "
+
+[node name="HardButton" type="Button" parent="DifficultySelect"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+theme = ExtResource("2_vjb58")
+theme_type_variation = &"RedButton"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Play Hard Mode (5x5)"
+
+[node name="HardLabel" type="Label" parent="DifficultySelect"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Highscore: "
+
+[node name="BackButton" type="Button" parent="DifficultySelect"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+theme = ExtResource("2_vjb58")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Back"
+
+[connection signal="pressed" from="Home/VBoxContainer2/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Home/VBoxContainer2/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="DifficultySelect/EasyButton" to="." method="_on_easy_button_pressed"]
+[connection signal="pressed" from="DifficultySelect/NormalButton" to="." method="_on_normal_button_pressed"]
+[connection signal="pressed" from="DifficultySelect/HardButton" to="." method="_on_hard_button_pressed"]
+[connection signal="pressed" from="DifficultySelect/BackButton" to="." method="_on_back_button_pressed"]

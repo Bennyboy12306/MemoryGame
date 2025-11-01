@@ -66,7 +66,8 @@ func _on_yellow_button_pressed() -> void:
 func choose_color(color: Color):
 	if color == selected_tile.stored_color:
 		Globals.score += 1
-		get_tree().reload_current_scene()
+		Globals.main.instantiate_game_scene()
+		queue_free()
 	else:
 		buttons.hide()
 		game_over.emit(selected_tile.stored_color)
