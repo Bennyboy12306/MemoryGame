@@ -62,4 +62,8 @@ Added a external link on the credits page for contacting
 
 Recoloured buttons from white to theme colours
 
+2.0.0
+
+- Remade the game in Godot keeping the same features
+
 The game is now finished any further updates will be bug fixes unless i ever decide to do more to this game
