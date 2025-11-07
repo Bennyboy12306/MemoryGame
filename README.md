@@ -6,6 +6,8 @@ It is a simple memory game.
 - Originally made Unreal Engine 4 in August 2022
 - Remade in Godot in October 2025
 
+- You can play the web version here https://bennyboy12306.itch.io/bennys-memory-game
+
 ![image](MemoryGame.png)
 
 ## Changelogs
